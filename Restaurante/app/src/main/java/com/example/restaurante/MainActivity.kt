@@ -7,11 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.restaurante.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    // Cria a var binding servirá para manipular a tela
+    // Cria a variavel binding servirá para manipular a tela
     private lateinit var binding:ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-    // Define o layout do MainActivity e atribui a var binding
+    // Define o layout do MainActivity e atribui a variavel binding
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         super.onCreate(savedInstanceState)
@@ -21,15 +21,15 @@ class MainActivity : AppCompatActivity() {
        // Passa o username do intent
         val username = intent.extras?.getString("username")
 
-        // Exibe uma mensagem de saudação se o username não for nulo ou vazio
+        // Exibe uma mensagem de saudação se o username não for nulo
         if(!username.isNullOrEmpty()){
             binding.textOla.setText("Olá, $username")
         }
-        // Define um botão clicável para o botão "Fechar" que termina todas as atividades
+        // Define um botão de clique para o botão "Fechar" que termina todas as atividades
         binding.buttonFechar.setOnClickListener {
             finishAffinity()
         }
-        // Define um botão clicável para o botão de "Pedir".
+        // Define um botão de clique para o botão de "Pedir".
         binding.buttonPedir.setOnClickListener {
             // Cria um intent para iniciar o SplashActivity
             val i = Intent(this, SplashActivity::class.java)
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
-        // Define um botão clicável para o checkbox da pizza.
+        // Define um botão de clique para o checkbox da pizza.
         binding.checkPizza.setOnClickListener {
 
             if(binding.checkPizza.isChecked()){
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 binding.textPrecoPizza.visibility = View.GONE
             }
         }
-        // Define um botão clicável para o checkbox (caixa de seleção) da salada.
+        // Define um botão de clique para o checkbox da salada.
         binding.checkSalada.setOnClickListener {
 
             if(binding.checkSalada.isChecked()){
