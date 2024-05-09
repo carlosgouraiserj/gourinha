@@ -5,10 +5,10 @@ import android.os.Bundle
 import com.example.restaurante.databinding.ActivityPedidoBinding
 
 class PedidoActivity : AppCompatActivity() {
-    // Declara a var binding do tipo ActivityPedidoBinding
+    // Declara a variavel binding do tipo ActivityPedidoBinding
     private lateinit var binding: ActivityPedidoBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Atribui a var binding no ActivityPedidoBinding
+        // Atribui a variavel binding no ActivityPedidoBinding
         binding = ActivityPedidoBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
     // Manda o Android usar o layout especificado pelo binding.root para exibir a interface do usuário da atividade atual
